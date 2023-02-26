@@ -1,0 +1,31 @@
+.container {
+    a{  
+        text-align: center;
+        width: 100px;
+        position: relative;
+        img {
+            display: block;
+        }
+        .menuTopIcon {
+            width: 100px;
+        }
+        .menuIcon {
+            width: 30px;
+        }
+        @for $i from 1 through 4{
+            #img#{$i}-after {
+                visibility: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            &:hover #img#{$i}-before {
+                visibility: hidden;
+            }
+            &:hover #img#{$i}-after {
+                visibility:visible;
+            }
+        }
+    }
+    
+}
